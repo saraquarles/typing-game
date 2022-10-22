@@ -1,5 +1,80 @@
+main {
+    display: grid;
+    place-items: center;
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 2rem;
+}
+
+h1 {
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3em;
+    line-height: 105%;
+    color: white;
+    margin: .5rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1.6em;
+    margin: .5rem;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0652DD;
+    color: white;
+}
+
+button {
+    display: flex;
+    margin: 0 auto;
+    padding: 10px;
+    border: 0;
+    border-radius: 50px;
+    font-size: 1.6em;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    background-color: black;
+    color: #FFC312;
+    border-radius: 5px;
+    padding: .5rem;
+}
+
+input {
+    width: 300px;
+    padding: 20px;
+    font-size: 2em;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: inset 1px 0px 5px 4px rgba(0, 0, 0, 0.2)
+}
+
+#gamer-name {
+    display: block;
+    padding: 5px;
+    width: 200px;
+    font-size: 1.5em;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.congrats {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FFC312;
+}
+
 .error {
-    background: #EA2027;
+    background-color: #EA2027;
 }
 
 .highlight {
@@ -11,6 +86,36 @@ span:after {
     content: "";
     display: inline-block;
     width: 6px;
+}
+
+.rocket {
+    display: block;
+    width: 60px;
+    height: 34px;
+    margin-left: 20px;
+    background: url(https://cdn.glitch.com/fe55c52b-f859-4f17-a4c6-1af45426e959%2Frocket.png?v=1620489294028
+    ) right center no-repeat;
+    background-size: 60px;
+}
+
+.button:hover .rocket {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.started button:before {
+    content: "re";
+}
+
+.started .rocket {
+    animation: zoomOutRight 1s;
+    animation-iteration-count: 1;
+    transform-origin: right center;
+}
+
+.winner {
+    background-image: url(https://cdn.glitch.me/fe55c52b-f859-4f17-a4c6-1af45426e959%2F6ob.gif
+    );
 }
 
 @keyframes shake {
@@ -34,17 +139,16 @@ span:after {
    }
  }
 
-.rocket {
-    display: block;
-    width: 60px;
-    height: 34px;
-    margin-left: 20px;
-    background: url(https://cdn.glitch.com/fe55c52b-f859-4f17-a4c6-1af45426e959%2Frocket.png?v=1620489294028
-    ) right center no-repeat;
-    background-size: 60px;
-}
-
-.winner {
-    background-image: url(https://cdn.glitch.me/fe55c52b-f859-4f17-a4c6-1af45426e959%2F6ob.gif
-    );
-}
+ .sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+  }
