@@ -42,10 +42,13 @@ button {
 
 ul {
     list-style: none;
-    background-color: black;
+    background-color:#0652DD;
     color: #FFC312;
+    font-weight: bold;
     border-radius: 5px;
     padding: .5rem;
+    border-style: solid;
+    border-color:#FFC312;
 }
 
 input {

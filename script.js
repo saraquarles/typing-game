@@ -112,7 +112,7 @@ function gameOver() {
     scoresUnorderedList.appendChild(liCurrentItem);
 
     //add fastest score to li's
-    const liTopScore = createElementForScore(topScore, "Top Score: ");
+    const liTopScore = createElementForScore(topScore, "Top score: ");
     scoresUnorderedList.appendChild(liTopScore);
 }
 
@@ -156,6 +156,11 @@ function initializeGame() {
 
     let topScore = getTopScore(scores);
     console.log("top score", topScore);
-    const liTopScore = createElementForScore(topScore, "Top Score: ");
+    const liTopScore = createElementForScore(topScore, "Top score: ");
     scoresUnorderedList.appendChild(liTopScore);
+}
+
+//moves cursor to text box after clicking start button
+document.getElementById('start').onclick = function() {
+    document.getElementById('typed-value').focus();
 }
